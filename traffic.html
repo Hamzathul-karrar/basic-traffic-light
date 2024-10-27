@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(225, 233, 251);
+        }
+        #head{
+            height: 270px;
+            width: 100px;
+            border:2px solid black;
+            border-radius: 10px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkslategray;
+        }
+        #body{
+            background-color: grey;
+            height: 430px;
+            width: 30px;
+            border:2px solid black;
+        }
+        #path{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 30px;
+            background-color: darkslategrey;
+        }
+        #red, #yellow, #green{
+            height: 28%;
+            width:  80%;
+            border: 2px solid WHITE;
+            border-radius: 50%;
+            
+        }
+        #red{
+            animation-name: redlight;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        #yellow{
+            animation-name: yellowlight;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        #green{
+            animation-name: greenlight;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes redlight{
+            0%,32% {
+                background-color: rgb(255, 0, 0);
+            }
+            33%,66% {
+                background-color: white;
+            }
+            67%,100% {
+                background-color: white;
+            }
+        }
+        @keyframes yellowlight{
+            0%,32%{
+                background-color: white;
+            }
+            33%,66% {
+                background-color: rgb(255, 255, 0);
+            }
+            67%,100% {
+                background-color: white;
+            }
+        }
+        @keyframes greenlight{
+            0%,32%{
+                background-color: white;
+            }
+            33%,66% {
+                background-color: white;
+            }
+            67%,100% {
+                background-color: rgb(0, 255, 0);
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <center>
+    <div id="head">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+    <div id="body"></div>
+    <div id="path"></div>
+    </center>
+</body>
+</html>
